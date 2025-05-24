@@ -118,43 +118,43 @@
 }
 
 .container_li {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: end;
+    justify-content: end; */
     padding: 15px;
     width: 200px;
     height: 200px;
     cursor: pointer;
 }
 
-.container_li:hover .artist__name {
+.container_li:hover .li__mainText {
     text-decoration: underline;
 }
 
 .artistsContainer__artist {
-    background-image: url('lady-gaga.jpg');
+    /* background-image: url('lady-gaga.jpg'); */
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .albumsContainer__album {
-    background-image: url('the-fame.jpg');
+    /* background-image: url('the-fame.jpg'); */
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
-.artist__name {
+.li__mainText {
     font-size: 14px;
     font-weight: 700;
     color: #fff;
 }
 
-.artist__name:hover {
+.li__mainText:hover {
     text-decoration: underline;
 }
 
-.artist__listeners {
+.li__subtext {
     font-size: 12px;
     color: #fff;
     margin-top: 8px;
@@ -227,9 +227,20 @@
     text-decoration: underline;
 }
 
-.track__time {
+.track__listeners {
     text-align: right;
 }
+
+.track__link {
+    text-decoration: none;
+    color: #222222;
+}
+
+.artist__link {
+    text-decoration: none;
+    color: #fff;
+}
+
 
 .inputContainer {
     position: relative;
@@ -298,4 +309,22 @@
     outline: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+.artist__url {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.message {
+    visibility: hidden;
+}
+
+.message__visible {
+    visibility: visible;
 }

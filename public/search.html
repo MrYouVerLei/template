@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="search.css">
+  <script defer src="scriptSearch.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
@@ -30,7 +31,6 @@
         <a href="/" class="logo">Last.fm</a>
       </div>
       <div class="header__links">
-        <button class="searchButton" onclick="location.href='search.html'"></button>
         <a href="https://www.last.fm/dashboard" class="link">Live</a>
         <a href="/" class="link">Music</a>
         <a href="https://www.last.fm/charts" class="link">Charts</a>
@@ -42,113 +42,37 @@
       <div class="mainContainer">
         <h1 class="textSearch">Search result for</h1>
         <div class="inputContainer">
-          <input type="text" class="searchInput" placeholder="Search for music...">
+          <input type="text" class="searchInput" placeholder="Search for music..." id="input" >
           <button type="reset" class="resetSearchButton"></button>
         </div>
 
         <div class="container artistsContainer">
           <h2>Artists</h2>
-          <ul class="container_ul artistsContainer_ul">
-            <li class="container_li artistsContainer__artist">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__listeners">6 713 244 listeners</div>
-            </li>
-            <li class="container_li artistsContainer__artist">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__listeners">6 713 244 listeners</div>
-            </li>
-            <li class="container_li artistsContainer__artist">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__listeners">6 713 244 listeners</div>
-            </li>
-            <li class="container_li artistsContainer__artist">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__listeners">6 713 244 listeners</div>
-            </li>
-            <li class="container_li artistsContainer__artist">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__listeners">6 713 244 listeners</div>
-            </li>
-            <li class="container_li artistsContainer__artist">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__listeners">6 713 244 listeners</div>
-            </li>
-            <li class="container_li artistsContainer__artist">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__listeners">6 713 244 listeners</div>
-            </li>
-            <li class="container_li artistsContainer__artist">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__listeners">6 713 244 listeners</div>
-            </li>
+          <ul class="container_ul artistsContainer_ul" id="search__artistsContainer">
+
           </ul>
+          <p class="noArtistsMessage message">No artists found.</p>
           <a class="moreLink artistsContainer__moreLink" href="">More artists ></a>
         </div>
 
         <div class="container albumsContainer">
           <h2>Albums</h2>
-          <ul class="container_ul albumsContainer_ul">
-            <li class="container_li albumsContainer__album">
-              <div class="album__name artist__name">The Fame</div>
-              <div class="album__artistName artist__listeners">Lady Gaga</div>
-            </li>
-            <li class="container_li albumsContainer__album">
-              <div class="album__name artist__name">The Fame</div>
-              <div class="album__artistName artist__listeners">Lady Gaga</div>
-            </li>
-            <li class="container_li albumsContainer__album">
-              <div class="album__name artist__name">The Fame</div>
-              <div class="album__artistName artist__listeners">Lady Gaga</div>
-            </li>
-            <li class="container_li albumsContainer__album">
-              <div class="album__name artist__name">The Fame</div>
-              <div class="album__artistName artist__listeners">Lady Gaga</div>
-            </li>
-            <li class="container_li albumsContainer__album">
-              <div class="album__name artist__name">The Fame</div>
-              <div class="album__artistName artist__listeners">Lady Gaga</div>
-            </li>
-            <li class="container_li albumsContainer__album">
-              <div class="album__name artist__name">The Fame</div>
-              <div class="album__artistName artist__listeners">Lady Gaga</div>
-            </li>
-            <li class="container_li albumsContainer__album">
-              <div class="album__name artist__name">The Fame</div>
-              <div class="album__artistName artist__listeners">Lady Gaga</div>
-            </li>
-            <li class="container_li albumsContainer__album">
-              <div class="album__name artist__name">The Fame</div>
-              <div class="album__artistName artist__listeners">Lady Gaga</div>
-            </li>
+          <ul class="container_ul albumsContainer_ul" id="search__albumsContainer">
+            
           </ul>
-          <a class="moreLink artistsContainer__moreLink" href="">More albums ></a>
+          <p class="noAlbumsMessage message">No albums found.</p>
+          <a class="moreLink albumsContainer__moreLink" href="">More albums ></a>
         </div>
 
         <div class="container tracksContainer">
           <h2>Tracks</h2>
           <table class="tracksTable">
-            <tbody>
-              <tr class="tracksTable__track">
-                <td class="cell__image"><img class="track__image" src="abracadabra.jpg" alt=""></td>
-                <td class="track__name">Abracadabra</td>
-                <td class="track__artistName">Lady Gaga</td>
-                <td class="track__time">03:20</td>
-              </tr>
-              <tr class="tracksTable__track">
-                <td class="cell__image"><img class="track__image" src="abracadabra.jpg" alt=""></td>
-                <td class="track__name">Abracadabra</td>
-                <td class="track__artistName">Lady Gaga</td>
-                <td class="track__time">03:20</td>
-              </tr>
-              <tr class="tracksTable__track">
-                <td class="cell__image"><img class="track__image" src="abracadabra.jpg" alt=""></td>
-                <td class="track__name">Abracadabra</td>
-                <td class="track__artistName">Lady Gaga</td>
-                <td class="track__time">03:20</td>
-              </tr>
+            <tbody class="tracksTable__body">
+
             </tbody>
           </table>
-          <a class="moreLink artistsContainer__moreLink" href="">More tracks ></a>
+          <p class="noTracksMessage message">No tracks found.</p>
+          <a class="moreLink tracksContainer__moreLink" href="">More tracks ></a>
         </div>
       </div>
     </main>

@@ -131,6 +131,11 @@
     }
 }
 
+.artist__url {
+    text-decoration: none;
+    color: #000;
+}
+
 .artist__image {
     border-radius: 50%;
     width: 100%;
@@ -155,8 +160,8 @@
     color: #999999;
 }
 
-.artist__image:hover + .artist__name {
-  text-decoration: underline;
+.artist__image:hover+.artist__name {
+    text-decoration: underline;
 }
 
 .main__container {
@@ -200,7 +205,7 @@
     width: calc(100% / 3);
     height: 70px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: row;
     margin-top: 24px;
 }
@@ -222,6 +227,7 @@
     color: #222222;
     padding: 2px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .track__name:hover {
@@ -233,6 +239,7 @@
     color: #222222;
     padding: 2px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .track__artistName:hover {
@@ -291,4 +298,22 @@
     outline: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+.header__searchInput {
+    display: inline-block;
+    width: 0;
+    margin-right: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+    overflow: hidden;
+    opacity: 0;
+    
+    transition: width 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.active {
+    width: 250px;
+    opacity: 1;
+    transform: translateX(0);
 }

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <script defer src="script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
@@ -29,7 +30,8 @@
         <a href="/" class="logo">Last.fm</a>
       </div>
       <div class="header__links">
-        <button class="searchButton" onclick="location.href='search.html'"></button>
+        <input type="text" class="header__searchInput" placeholder="Search for music..." id="input" />
+        <button class="searchButton" ></button>
         <a href="https://www.last.fm/dashboard" class="link">Live</a>
         <a href="/" class="link">Music</a>
         <a href="https://www.last.fm/charts" class="link">Charts</a>
@@ -41,252 +43,20 @@
       <div id="result"></div>
       <div class="mainContent">
         <div class="main__header">Music</div>
-        <div class="main__container">
-          <div class="main__container__header">Tags to explore</div>
-          <hr class="header__separator">
-          <div class="tagsGrid">
-            <div class="tag__card">rock</div>
-            <div class="tag__card">hip-hop</div>
-            <div class="tag__card">indie</div>
-            <div class="tag__card">jazz</div>
-            <div class="tag__card">british</div>
-            <div class="tag__card">punk</div>
-            <div class="tag__card">80s</div>
-            <div class="tag__card">dance</div>
-            <div class="tag__card">alternative</div>
-            <div class="tag__card">classical</div>
-            <div class="tag__card">rap</div>
-            <div class="tag__card">electronic</div>
-          </div>
-        </div>
 
         <div class="main__container">
           <div class="main__container__header">Hot right now</div>
           <hr class="header__separator">
-          <ul class="artistsContainer">
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
-            <li class="artistsContainer__artist">
-              <img class="artist__image" src="lady-gaga.jpg" alt="">
-              <div class="artist__name">Lady Gaga</div>
-              <div class="artist__tags">
-                <a class="tag" href="">pop</a> ·
-                <a class="tag" href="">dance</a> ·
-                <a class="tag" href="">electronic</a>
-              </div>
-            </li>
+          <ul class="artistsContainer" >
+
           </ul>
         </div>
 
         <div class="main__container">
           <div class="main__container__header">Popular tracks</div>
           <hr class="header__separator">
-          <ul class="tracksContainer">
-            <li class="tracksContainer__track">
-              <img class="track__image" src="abracadabra.jpg" alt="">
-              <div class="track__info">
-                <div class="track__name">Abracadabra</div>
-                <div class="track__artistName">Lady Gaga</div>
-                <div class="track__tags">
-                  <a class="tag" href="">pop</a> ·
-                  <a class="tag" href="">dance</a> ·
-                  <a class="tag" href="">electronic</a>
-                </div>
-              </div>
-            </li>
-            <li class="tracksContainer__track">
-              <img class="track__image" src="abracadabra.jpg" alt="">
-              <div class="track__info">
-                <div class="track__name">Abracadabra</div>
-                <div class="track__artistName">Lady Gaga</div>
-                <div class="track__tags">
-                  <a class="tag" href="">pop</a> ·
-                  <a class="tag" href="">dance</a> ·
-                  <a class="tag" href="">electronic</a>
-                </div>
-              </div>
-            </li>
-            <li class="tracksContainer__track">
-              <img class="track__image" src="abracadabra.jpg" alt="">
-              <div class="track__info">
-                <div class="track__name">Abracadabra</div>
-                <div class="track__artistName">Lady Gaga</div>
-                <div class="track__tags">
-                  <a class="tag" href="">pop</a> ·
-                  <a class="tag" href="">dance</a> ·
-                  <a class="tag" href="">electronic</a>
-                </div>
-              </div>
-            </li>
-            <li class="tracksContainer__track">
-              <img class="track__image" src="abracadabra.jpg" alt="">
-              <div class="track__info">
-                <div class="track__name">Abracadabra</div>
-                <div class="track__artistName">Lady Gaga</div>
-                <div class="track__tags">
-                  <a class="tag" href="">pop</a> ·
-                  <a class="tag" href="">dance</a> ·
-                  <a class="tag" href="">electronic</a>
-                </div>
-              </div>
-            </li>
-            <li class="tracksContainer__track">
-              <img class="track__image" src="abracadabra.jpg" alt="">
-              <div class="track__info">
-                <div class="track__name">Abracadabra</div>
-                <div class="track__artistName">Lady Gaga</div>
-                <div class="track__tags">
-                  <a class="tag" href="">pop</a> ·
-                  <a class="tag" href="">dance</a> ·
-                  <a class="tag" href="">electronic</a>
-                </div>
-              </div>
-            </li>
-            <li class="tracksContainer__track">
-              <img class="track__image" src="abracadabra.jpg" alt="">
-              <div class="track__info">
-                <div class="track__name">Abracadabra</div>
-                <div class="track__artistName">Lady Gaga</div>
-                <div class="track__tags">
-                  <a class="tag" href="">pop</a> ·
-                  <a class="tag" href="">dance</a> ·
-                  <a class="tag" href="">electronic</a>
-                </div>
-              </div>
-            </li>
-            <li class="tracksContainer__track">
-              <img class="track__image" src="abracadabra.jpg" alt="">
-              <div class="track__info">
-                <div class="track__name">Abracadabra</div>
-                <div class="track__artistName">Lady Gaga</div>
-                <div class="track__tags">
-                  <a class="tag" href="">pop</a> ·
-                  <a class="tag" href="">dance</a> ·
-                  <a class="tag" href="">electronic</a>
-                </div>
-              </div>
-            </li>
-            <li class="tracksContainer__track">
-              <img class="track__image" src="abracadabra.jpg" alt="">
-              <div class="track__info">
-                <div class="track__name">Abracadabra</div>
-                <div class="track__artistName">Lady Gaga</div>
-                <div class="track__tags">
-                  <a class="tag" href="">pop</a> ·
-                  <a class="tag" href="">dance</a> ·
-                  <a class="tag" href="">electronic</a>
-                </div>
-              </div>
-            </li>
-            <li class="tracksContainer__track">
-              <img class="track__image" src="abracadabra.jpg" alt="">
-              <div class="track__info">
-                <div class="track__name">Abracadabra</div>
-                <div class="track__artistName">Lady Gaga</div>
-                <div class="track__tags">
-                  <a class="tag" href="">pop</a> ·
-                  <a class="tag" href="">dance</a> ·
-                  <a class="tag" href="">electronic</a>
-                </div>
-              </div>
-            </li>
+          <ul class="tracksContainer" >
+
           </ul>
         </div>
       </div>

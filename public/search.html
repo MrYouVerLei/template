@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <!-- <script defer src="script.js"></script> -->
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="search.css">
+  <script defer src="scriptSearch.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
@@ -30,8 +31,6 @@
         <a href="/" class="logo">Last.fm</a>
       </div>
       <div class="header__links">
-        <input type="text" class="header__searchInput" placeholder="Search for music..." id="input" />
-        <button class="searchButton" ></button>
         <a href="https://www.last.fm/dashboard" class="link">Live</a>
         <a href="/" class="link">Music</a>
         <a href="https://www.last.fm/charts" class="link">Charts</a>
@@ -40,24 +39,40 @@
     </header>
 
     <main class="main">
-      <div id="result"></div>
-      <div class="mainContent">
-        <div class="main__header">Music</div>
-
-        <div class="main__container">
-          <div class="main__container__header">Hot right now</div>
-          <hr class="header__separator">
-          <ul class="artistsContainer" >
-
-          </ul>
+      <div class="mainContainer">
+        <h1 class="textSearch">Search result for</h1>
+        <div class="inputContainer">
+          <input type="text" class="searchInput" placeholder="Search for music..." id="input" >
+          <button type="reset" class="resetSearchButton"></button>
         </div>
 
-        <div class="main__container">
-          <div class="main__container__header">Popular tracks</div>
-          <hr class="header__separator">
-          <ul class="tracksContainer" >
+        <div class="container artistsContainer">
+          <h2>Artists</h2>
+          <ul class="container_ul artistsContainer_ul" id="search__artistsContainer">
 
           </ul>
+          <p class="noArtistsMessage message">No artists found.</p>
+          <a class="moreLink artistsContainer__moreLink" href="">More artists ></a>
+        </div>
+
+        <div class="container albumsContainer">
+          <h2>Albums</h2>
+          <ul class="container_ul albumsContainer_ul" id="search__albumsContainer">
+            
+          </ul>
+          <p class="noAlbumsMessage message">No albums found.</p>
+          <a class="moreLink albumsContainer__moreLink" href="">More albums ></a>
+        </div>
+
+        <div class="container tracksContainer">
+          <h2>Tracks</h2>
+          <table class="tracksTable">
+            <tbody class="tracksTable__body">
+
+            </tbody>
+          </table>
+          <p class="noTracksMessage message">No tracks found.</p>
+          <a class="moreLink tracksContainer__moreLink" href="">More tracks ></a>
         </div>
       </div>
     </main>
